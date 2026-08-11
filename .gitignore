@@ -1,0 +1,7 @@
+# Public tree only ??? see docs/specs/TOOLS_PUBLISH_LITE.md in the monorepo
+out/
+out-ir/
+out-linux/
+out-linux-ir/
+.fxrun/
+*.ps1
