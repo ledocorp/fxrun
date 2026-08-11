@@ -1,0 +1,29 @@
+# Fxrun.toml - self-host recipes for published fxrun
+[fxrun]
+version = 1
+default = "check"
+
+[recipe.list]
+doc = "List recipes"
+cmds = []
+
+[recipe.build]
+doc = "Rebuild emit-C binary"
+cmds = ["powershell -NoProfile -File build.ps1"]
+
+[recipe.build_ir]
+doc = "Rebuild IR binary"
+cmds = ["powershell -NoProfile -File build-ir.ps1"]
+
+[recipe.check]
+doc = "Dual-path corpus"
+cmds = ["powershell -NoProfile -File tests/smoke.ps1"]
+
+[recipe.test]
+doc = "Rebuild both backends then corpus"
+depends = ["build", "build_ir"]
+cmds = ["powershell -NoProfile -File tests/smoke.ps1"]
+
+[recipe.verify]
+doc = "Pin files present"
+cmds = ["powershell -NoProfile -File verify-pin.ps1"]

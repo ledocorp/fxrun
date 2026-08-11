@@ -1,0 +1,7 @@
+out/
+out-ir/
+.fxrun/
+dist/
+vendor/
+tests/corpus_work/
+*.bak
