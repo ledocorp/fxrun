@@ -1,0 +1,14 @@
+# Example Fxrun.toml
+
+[fxrun]
+version = 1
+default = "test"
+
+[recipe.build]
+doc = "Build with fx emit-C"
+cmds = ["fx build main.fx -o out --emit-c"]
+
+[recipe.test]
+doc = "Run after build"
+depends = ["build"]
+cmds = ["fx test . --backend both"]

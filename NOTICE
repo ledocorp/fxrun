@@ -1,0 +1,12 @@
+fxrun
+Copyright 2026 Shawn Londono
+
+This product is part of the LedoCorp fx tools season.
+It depends on the fx language package (ledocorp/fxlang).
+
+Project home: http://www.ledocorp.org
+Source hosting: https://github.com/ledocorp/fxrun
+Language package: https://github.com/ledocorp/fxlang
+
+The contents of this NOTICE file are for informational purposes only and
+do not modify the Apache License, Version 2.0.
