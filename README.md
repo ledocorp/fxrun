@@ -2,13 +2,13 @@
 
 **Task / command runner for [fx](https://github.com/ledocorp/fxlang) projects.**
 
-fxrun reads a `Fxrun.toml` manifest, runs named recipes with dependencies, and can skip work when declared inputs are unchanged (content hash). Product logic is **fx**; rebuild with `fx build … --cli` (shared argv/process spine — no author-written host.c).
+fxrun reads a `fxrun.toml` manifest, runs named recipes with dependencies, and can skip work when declared inputs are unchanged (content hash). Product logic is **fx**; rebuild with `fx build … --cli` (shared argv/process spine — no author-written host.c).
 
 | | |
 |--|--|
 | **Requires** | [fx](https://github.com/ledocorp/fxlang) **0.9.6+** |
 | **Platforms** | Windows + Linux **x86_64** |
-| **License** | Apache-2.0 |
+| **License** | GPL-3.0 |
 | **Org** | [LedoCorp](http://www.ledocorp.org) |
 
 ## Install (release binaries)
@@ -34,7 +34,7 @@ Optional: `fxrun-ir` is the IR dual-path binary (same CLI).
 ## Quick start
 
 ```toml
-# Fxrun.toml (see examples/Fxrun.toml)
+# fxrun.toml (see examples/fxrun.toml)
 [fxrun]
 version = 1
 default = "test"
@@ -56,7 +56,7 @@ fxrun --dry-run test
 fxrun --force gen
 ```
 
-Walk-up: running in a subdirectory finds the nearest parent `Fxrun.toml` / `fxrun.toml` and executes commands from that directory.
+Walk-up: running in a subdirectory finds the nearest parent `fxrun.toml` / `fxrun.toml` and executes commands from that directory.
 
 ## CLI
 
@@ -92,4 +92,4 @@ Parallel DAG · remote cache · Make/just syntax · replacing `fx build` · macO
 
 ## License
 
-Copyright Shawn Londono · LedoCorp · Apache-2.0 — see [LICENSE](LICENSE).
+Copyright Shawn Londono · LedoCorp · GPL-3.0 — see [LICENSE](LICENSE).
